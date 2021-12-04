@@ -1,6 +1,6 @@
 # Lateral menu
 
-Estive estudando Sass nos ultimos dias e este projeto me ajudou muito a entender como usar, e também como manipular conteudos com JavaScript.
+I've been studying Sass for the last few days and this project helped me a lot to understand how to use it, and also how to manipulate content with JavaScript.
 
 Template: https://www.youtube.com/channel/UCRhKK6VrISnIWPJjYxBPKnA/videos
 
