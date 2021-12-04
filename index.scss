@@ -71,11 +71,14 @@ body {
 .board-container {
   width: 100%;
   height: 100%;
-  background: blue;
+  border-radius: 5px;
+
   position: relative;
 
   display: flex;
   align-items: center;
+  -webkit-box-shadow: 8px 12px 13px -8px rgba(0, 0, 0, 0.61);
+  box-shadow: 8px 12px 13px -8px rgba(0, 0, 0, 0.61);
 
   .board {
     background: white;
@@ -87,6 +90,11 @@ body {
     right: 30px;
 
     border-radius: 70px;
+    padding: 0 30px;
+    -webkit-box-shadow: 8px 12px 20px -7px rgba(0, 0, 0, 0.61);
+    box-shadow: 8px 12px 20px -7px rgba(0, 0, 0, 0.61);
+
+    animation: board-right-grow 0.6s;
 
     .board-left,
     .board-right {
@@ -137,5 +145,77 @@ body {
       height: 100%;
       padding: 40px;
     }
+  }
+
+  .flex-board {
+    width: 600px;
+    height: 370px;
+    background: $purple;
+    border-radius: 70px;
+
+    position: absolute;
+    right: 300px;
+
+    .illustration {
+      width: 200px;
+      position: absolute;
+      top: -50px;
+      left: 70px;
+      opacity: 1;
+    }
+  }
+
+  .flex-board-open {
+    animation: board-right-grow 0.7s ease 0s forwards;
+
+    .illustration {
+      animation: show 0.5s forwards;
+    }
+  }
+
+  .flex-board-close {
+    animation: board-right-shrink 0.7s ease 0s forwards;
+
+    .illustration {
+      animation: hide 0.5s forwards;
+    }
+  }
+}
+
+@keyframes board-right-grow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 600px;
+  }
+}
+
+@keyframes board-right-shrink {
+  0% {
+    width: 600px;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
