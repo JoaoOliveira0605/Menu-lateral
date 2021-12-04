@@ -8,11 +8,21 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: 'Readex Pro', sans-serif;
+  font-family: 'inter', sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  color: #7829f1;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 38px;
+  color: #7829f1;
+}
+
+p {
+  color: #707070;
 }
 
 /*Variables*/
@@ -73,7 +83,6 @@ body {
     height: 370px;
 
     display: flex;
-
     position: absolute;
     right: 30px;
 
@@ -83,6 +92,50 @@ body {
     .board-right {
       width: 50%;
       height: 100%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+
+      .info-img {
+        margin-top: 15px;
+        height: 150px;
+        border-radius: 16px;
+      }
+    }
+
+    .inline-content {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 5px;
+      }
+    }
+
+    .header {
+      svg {
+        color: $purple;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .subheader {
+      svg {
+        color: $primary-color;
+      }
+    }
+    .board-right {
+      p {
+        margin: 5px 0;
+      }
+      h2 {
+        font-weight: 500;
+        margin: 20px 0;
+      }
+    }
+
+    .card {
+      height: 100%;
+      padding: 40px;
     }
   }
 }

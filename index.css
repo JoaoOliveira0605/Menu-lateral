@@ -7,11 +7,21 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: 'Readex Pro', sans-serif;
+  font-family: 'inter', sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  color: #7829f1;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 38px;
+  color: #7829f1;
+}
+
+p {
+  color: #707070;
 }
 
 /*Variables*/
@@ -96,5 +106,51 @@ body {
 .board-container .board .board-right {
   width: 50%;
   height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.board-container .board .board-left .info-img,
+.board-container .board .board-right .info-img {
+  margin-top: 15px;
+  height: 150px;
+  border-radius: 16px;
+}
+
+.board-container .board .inline-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board-container .board .inline-content svg {
+  margin: 0 5px;
+}
+
+.board-container .board .header svg {
+  color: #7829f1;
+  width: 30px;
+  height: 30px;
+}
+
+.board-container .board .subheader svg {
+  color: #707070;
+}
+
+.board-container .board .board-right p {
+  margin: 5px 0;
+}
+
+.board-container .board .board-right h2 {
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.board-container .board .card {
+  height: 100%;
+  padding: 40px;
 }
 /*# sourceMappingURL=index.css.map */
